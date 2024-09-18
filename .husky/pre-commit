@@ -1,0 +1,13 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🚀 Running Lint Staged..."
+
+npx lint-staged
+
+if [ $? -eq 0 ]; then
+  echo "✅ Lint passed! ✅"
+else
+  echo "❌ Lint failed! ❌"
+  exit 1
+fi

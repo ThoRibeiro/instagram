@@ -1,1 +1,9 @@
+#!/bin/sh
 npx --no-install commitlint --edit "$1"
+
+if [ $? -eq 0 ]; then
+  echo "🚀 commit message OK 🚀"
+else
+  echo "❌ respect the commit message rule ❌"
+  exit 1
+fi
