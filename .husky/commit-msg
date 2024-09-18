@@ -1,6 +1,6 @@
 #!/bin/sh
 npx --no-install commitlint --edit "$1"
-
+echo "🚀 Running check commit message... 🚀"
 if [ $? -eq 0 ]; then
   echo "🚀 commit message OK 🚀"
 else
